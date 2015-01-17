@@ -33,6 +33,13 @@ class DataStructures {
    {
      l.zip(k)
    }
+   def findNumber(l:List[Int],k:Int)=
+   {
+     l.find((i:Int) => i == k );
+   }
+   def dropOddStart(l:List[Int]):List[Int]={
+     return l.dropWhile(_ % 2 != 0)
+   }
 }
 object ds{
   
