@@ -1,4 +1,4 @@
-package Basics
+package bsc
 
 /**
  * @author Ter
@@ -15,13 +15,26 @@ class DataStructures {
      ("Siberian Husky","Jake")
      //"Siberian Husky" -> "Jake"
    }
-   def map()={
+   def getMap()={
      Map(tuple)
    }
-   
-   
+   def addOne(l:List[Int])={
+     l.map { x => x+1 }
+   }
+   def double(l:List[Int]):List[Int]={
+     l.map { x => x*2 }
+     return l
+   }
+   def removeOdd(l:List[Int])={
+     def isEven(i:Int): Boolean = i%2 == 0
+     l.filter { x:Int => isEven(x) }
+   }
+   def combineLists(l:List[Int], k:List[Int])=
+   {
+     l.zip(k)
+   }
 }
-object dataStruct{
+object ds{
   
   def apply()={
     new DataStructures()
